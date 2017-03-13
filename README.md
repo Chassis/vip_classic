@@ -1,4 +1,7 @@
 # VIP Classic Beta
+
+This is currently in Beta and needs to be tested.
+
 Adds VIP support to Chassis.
 
 With VIP Quickstart by Automattic is now depreciated, this project is setup to take over community involvement.
