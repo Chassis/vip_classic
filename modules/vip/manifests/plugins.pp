@@ -21,7 +21,7 @@ class vip::plugins (
 
 	exec { "vip-plugins-install":
 		command => "git clone --recursive https://github.com/svn2github/wordpress-vip-plugins.git /vagrant/content/themes/vip/plugins",
-		path	=> '/usr/bin/',
+		path	=> [ '/usr/bin/', '/bin' ],
 		require => Package[ 'git-core' ],
 		onlyif  => "test ! -d /vagrant/content/themes/vip/plugins",
 		timeout => 0
@@ -37,7 +37,7 @@ class vip::plugins (
 
 	exec { "mu-plugins-install":
 		command => "git clone --recursive https://github.com/automattic/vip-wpcom-mu-plugins.git /vagrant/content/mu-plugins",
-		path	=> '/usr/bin/',
+		path	=> [ '/usr/bin/', '/bin' ],
 		require => Package[ 'git-core' ],
 		onlyif  => "test ! -d /vagrant/content/mu-plugins",
 		timeout => 0
