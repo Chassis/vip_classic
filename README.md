@@ -1,6 +1,6 @@
 # VIP Classic Beta
 
-This is currently in Beta and needs to be tested.
+This is currently in Beta, this has been tested however check the Things to do list below.
 
 Adds VIP support to Chassis.
 
@@ -16,7 +16,12 @@ We only support PHP 7+ due to WP.com websites being upgraded to PHP 7 recently.
 3. Add `10.86.73.80 vip.local` to your `hosts` file and any additional domains you need, use the same IP Address
 4. `vagrant up`
 5. `git clone git@github.com:stuartshields/chassis-vip.git extensions/vip`
-6. `vagrant provision` - Depending on your internet connection, this could take a while as we need to download over 300MB in files.
+6. `vagrant provision`
+
+### Things to do
+
+1. Add Concatenation support
+2. Add more items to list
 
 ### Updating Domain Information
 You'll need to update the hosts setup before provisioning. Only add top-level domains.
