@@ -15,7 +15,7 @@ We only support PHP 7+ due to WP.com websites being upgraded to PHP 7 recently.
 2. Clone `config.yaml` into the content folder i.e: `git clone https://github.com/stuartshields/vip-config.git content`
 3. Add `10.86.73.80 vip.local` to your `hosts` file and any additional domains you need, use the same IP Address
 4. `vagrant up`
-5. `git clone git@github.com:stuartshields/chassis-vip.git extensions/vip`
+5. `git clone git@github.com:stuartshields/chassis-vip-classic.git extensions/vip`
 6. `vagrant provision`
 
 ### Things to do
