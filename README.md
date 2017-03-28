@@ -39,6 +39,6 @@ It's recommended that you install the following Chassis extensions
 
 [Memcache](https://github.com/Chassis/memcache)
 
-[Debugging](https://github.com/Chassis/Debugging)
+[VIP Debugging](https://github.com/stuartshields/vip-debugging)
 
 Once all extensions are added you can now `vagrant provision`
