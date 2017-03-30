@@ -1,8 +1,20 @@
 # Automattic VIP Classic Beta extension for Chassis
 class vip (
   $php = $::vip_config[php],
-  $path  = '/vagrant/extensions/vip',
+  $path  = '/vagrant/extensions/chassis-vip-classic',
 ) {
+  if ! ( File['/vagrant/content'] ) {
+    file { '/vagrant/content':
+      ensure => 'directory',
+    }
+  }
+
+  if ! ( File['/vagrant/content/themes/vip'] ) {
+    file { '/vagrant/content/themes/vip':
+      ensure => 'directory',
+    }
+  }
+
   file { "${$path}/local-config.php":
     content => template('vip/local-config.php.erb'),
     owner   => 'www-data',
