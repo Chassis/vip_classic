@@ -9,8 +9,8 @@ class vip (
     }
   }
 
-  if ! ( File['/vagrant/content/themes/vip'] ) {
-    file { '/vagrant/content/themes/vip':
+  if ! ( File['/vagrant/content/config'] ) {
+    file { '/vagrant/content/config':
       ensure => 'directory',
     }
   }
