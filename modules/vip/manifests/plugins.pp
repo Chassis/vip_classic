@@ -1,6 +1,6 @@
 # Automattic VIP Classic Beta extension for Chassis
 class vip::plugins (
-  $path  = '/vagrant/extensions/chassis-vip-classic',
+  $path  = '/vagrant/extensions/vip-classic',
   $vip_config = sz_load_config(),
 
   $github_plugins = {

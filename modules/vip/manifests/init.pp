@@ -1,7 +1,7 @@
 # Automattic VIP Classic Beta extension for Chassis
 class vip (
   $php = $::vip_config[php],
-  $path  = '/vagrant/extensions/chassis-vip-classic',
+  $path  = '/vagrant/extensions/vip-classic',
 ) {
 
   file { "${$path}/local-config.php":
