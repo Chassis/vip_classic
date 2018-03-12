@@ -1,8 +1,7 @@
 # Automattic VIP Classic Beta extension for Chassis
-class vip::plugins (
-		$path  = '/vagrant/extensions/vip-classic',
-		$vip_config = sz_load_config(),
-
+# lint:ignore: no-names_containing_dash-check
+class vip-classic::plugins (
+  $path  = '/vagrant/extensions/vip-classic',
 		$github_plugins = {
 				'themes/vip/plugins' => 'svn2github/wordpress-vip-plugins',
 				'mu-plugins' => 'automattic/vip-wpcom-mu-plugins',
