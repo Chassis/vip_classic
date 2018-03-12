@@ -1,7 +1,7 @@
 # Automattic VIP Classic Beta extension for Chassis
 # lint:ignore: no-names_containing_dash-check
 class vip-classic::php (
-  $php = $config[php]
+  $php = $::config[php]
 ) {
 	if versioncmp($php, '5.4') <= 0 {
 		$php_package = 'php5'
