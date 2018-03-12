@@ -1,5 +1,5 @@
 # Automattic VIP Classic Beta extension for Chassis
-class vip::php (
+class vip-classic::php (
   $php = $config[php]
 ) {
   if versioncmp( "${$php}", '5.4') <= 0 {
