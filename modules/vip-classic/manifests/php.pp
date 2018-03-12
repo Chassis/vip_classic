@@ -1,4 +1,5 @@
 # Automattic VIP Classic Beta extension for Chassis
+# lint:ignore: no-names_containing_dash-check
 class vip-classic::php (
   $php = $config[php]
 ) {
