@@ -3,7 +3,7 @@
 class vip-classic::php (
   $php = $::config[php]
 ) {
-		if ( ! empty( $config[disabled_extensions] ) and 'chassis/vip-classic' in $config[disabled_extensions] ) {
+		if ( ! empty( $::config[disabled_extensions] ) and 'chassis/vip-classic' in $::config[disabled_extensions] ) {
 				$file = absent
 		} else {
 				$file = present
