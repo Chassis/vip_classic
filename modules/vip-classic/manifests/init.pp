@@ -26,8 +26,8 @@ class vip-classic (
     group   => 'www-data',
     mode    => '0644',
   }
-  class {"vip-classic::plugins": }
-  class {"vip-classic::php":
+  class {'vip-classic::plugins': }
+  class {'vip-classic::php':
     require => Class['vip-classic'],
   }
 }
