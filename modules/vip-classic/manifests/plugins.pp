@@ -7,7 +7,7 @@ class vip-classic::plugins (
 				'mu-plugins' => 'automattic/vip-wpcom-mu-plugins',
 		}
 ) {
-		if ( ! empty( $config[disabled_extensions] ) and 'chassis/vip-classic' in $config[disabled_extensions] ) {
+		if ( ! empty( $::config[disabled_extensions] ) and 'chassis/vip-classic' in $::config[disabled_extensions] ) {
 				$directory = absent
 		} else {
 				$directory = directory
