@@ -27,7 +27,7 @@ class vip-classic::plugins (
 		}
 
 		file { '/vagrant/content/mu-plugins':
-			ensure => $directory,
+			ensure  => $directory,
 			recurse => true,
 			force   => true
 		}
