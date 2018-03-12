@@ -2,12 +2,12 @@
 class vip::php (
   $php = $::vip_config[php]
 ) {
-  if versioncmp( "${$php}", '5.4') <= 0 {
+  if versioncmp($php, '5.4') <= 0 {
     $php_package = 'php5'
     $php_dir = 'php5'
   }
   else {
-    $php_package = "${php}"
+    $php_package = $php
     $php_dir = "php/${php}"
   }
 
