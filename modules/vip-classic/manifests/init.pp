@@ -6,11 +6,18 @@ class vip-classic (
   $path  = '/vagrant/extensions/vip-classic',
 ) {
 
+  if ( ! empty( $config[disabled_extensions] ) and 'chassis/vip-classic' in $config[disabled_extensions] ) {
+    $file = absent
+  } else {
+    $file = present
+  }
+
   file { "${$path}/local-config.php":
     content => template('vip-classic/local-config.php.erb'),
     owner   => 'www-data',
     group   => 'www-data',
     mode    => '0644',
+    ensure  => $file
   }
 
   file { "${$path}/roles.php":
@@ -18,6 +25,7 @@ class vip-classic (
     owner   => 'www-data',
     group   => 'www-data',
     mode    => '0644',
+    ensure  => $file
   }
 
   file { "${$path}/vip-config.php":
@@ -25,6 +33,7 @@ class vip-classic (
     owner   => 'www-data',
     group   => 'www-data',
     mode    => '0644',
+    ensure  => $file
   }
   class {'vip-classic::plugins': }
   class {'vip-classic::php':
