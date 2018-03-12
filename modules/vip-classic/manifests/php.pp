@@ -20,11 +20,11 @@ class vip-classic::php (
 
 	# Bump max_input_vars to match WordPress.com
 	file_line { 'max_input_vars = 6144':
+		ensure  => $file,
 		path    => "/etc/${$php_dir}/fpm/php.ini",
 		line    => 'max_input_vars = 6144',
 		match   => '^(; max_input_vars|max_input_vars)',
 		notify  => Service["php${$php_package}-fpm"],
-		require => Package["php${$php_package}-fpm"],
-		ensure  => $file
+		require => Package["php${$php_package}-fpm"]
 	}
 }
