@@ -1,6 +1,6 @@
 # Automattic VIP Classic Beta extension for Chassis
 class vip::php (
-  $php = $::vip_config[php]
+  $php = $config[php]
 ) {
   if versioncmp( "${$php}", '5.4') <= 0 {
     $php_package = 'php5'

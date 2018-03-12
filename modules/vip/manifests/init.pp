@@ -1,6 +1,7 @@
 # Automattic VIP Classic Beta extension for Chassis
 class vip (
-  $php = $::vip_config[php],
+  $config,
+  $php = $config[php],
   $path  = '/vagrant/extensions/vip-classic',
 ) {
 
@@ -23,5 +24,9 @@ class vip (
     owner   => 'www-data',
     group   => 'www-data',
     mode    => '0644',
+  }
+  class {"vip::plugins": }
+  class {"vip::php":
+    require => Class['vip'],
   }
 }
