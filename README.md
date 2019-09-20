@@ -12,9 +12,9 @@ We only support PHP 7+ due to WP.com websites being upgraded to PHP 7 recently.
 
 1. Clone `chassis` i.e.: `git clone --recursive https://github.com/Chassis/Chassis chassis`
 2. Change into the directory `cd chassis`
-3. Clone `config.yaml` into the content folder i.e.: `git clone https://github.com/stuartshields/vip-config.git content`
+    3. Clone `config.yaml` into the content folder i.e.: `git clone https://github.com/stuartshields/vip-config.git content`
 4. `vagrant up`
-5. `git clone https://github.com/Chassis/vip-classic.git extensions/vip-classic` (This step is important)
+5. `git clone https://github.com/Chassis/vip_classic.git extensions/vip_classic` (This step is important)
 6. `vagrant provision`
 
 Note: Have a look at the Chassis documentation on [Custom Host Names](http://docs.chassis.io/en/latest/config/#custom-host-names) if you need to change the domain.
